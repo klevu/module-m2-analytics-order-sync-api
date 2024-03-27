@@ -11,5 +11,5 @@ use Magento\Framework\Component\ComponentRegistrar;
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
     'Klevu_AnalyticsOrderSyncApi',
-    __DIR__
+    __DIR__,
 );

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<!-- Copyright © Klevu Oy. All rights reserved. See LICENSE.txt for license details. -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Klevu_Configuration::configuration">
+                                <resource id="Klevu_Configuration::data_sync">
+                                    <resource id="Klevu_AnalyticsOrderSyncApi::configuration"
+                                              title="Order Analytics"
+                                              translate="title"
+                                              sortOrder="20"/>
+                                </resource>
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+
+            <resource id="Klevu_AnalyticsOrderSyncApi::webapi"
+                      title="Klevu (WebAPI): Order Sync"
+                      translate="title"
+                      sortOrder="10000"/>
+        </resources>
+    </acl>
+</config>

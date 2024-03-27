@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<!-- Copyright © Klevu Oy. All rights reserved. See LICENSE.txt for license details. -->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Queue Order For Sync -->
+    <route url="/V1/klevu-analytics/queue-order-for-sync/order/:orderId" method="POST">
+        <service class="Klevu\AnalyticsOrderSyncApi\Api\QueueOrderForSyncActionInterface" method="execute"/>
+        <resources>
+            <resource ref="Klevu_AnalyticsOrderSyncApi::webapi"/>
+        </resources>
+        <data>
+            <parameter name="via" force="true">webapi</parameter>
+        </data>
+    </route>
+
+    <!-- Mark Order As Processing -->
+    <route url="/V1/klevu-analytics/mark-order-as-processing/order/:orderId" method="POST">
+        <service class="Klevu\AnalyticsOrderSyncApi\Api\MarkOrderAsProcessingActionInterface" method="execute"/>
+        <resources>
+            <resource ref="Klevu_AnalyticsOrderSyncApi::webapi"/>
+        </resources>
+        <data>
+            <parameter name="via" force="true">webapi</parameter>
+        </data>
+    </route>
+
+    <!-- Mark Order As Processed -->
+    <route url="/V1/klevu-analytics/mark-order-as-processed/order/:orderId" method="POST">
+        <service class="Klevu\AnalyticsOrderSyncApi\Api\MarkOrderAsProcessedActionInterface" method="execute"/>
+        <resources>
+            <resource ref="Klevu_AnalyticsOrderSyncApi::webapi"/>
+        </resources>
+        <data>
+            <parameter name="via" force="true">webapi</parameter>
+        </data>
+    </route>
+</routes>
