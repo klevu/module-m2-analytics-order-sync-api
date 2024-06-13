@@ -10,8 +10,6 @@ declare(strict_types=1);
 
 namespace Klevu\AnalyticsOrderSyncApi\Api\Data;
 
-use Magento\Framework\Model\AbstractModel;
-
 interface SyncOrderHistoryInterface
 {
     /**
@@ -22,9 +20,10 @@ interface SyncOrderHistoryInterface
     // phpcs:disable SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
     /**
      * @param int|null $entityId
-     * @return AbstractModel
+     *
+     * @return self
      */
-    public function setEntityId($entityId): AbstractModel;
+    public function setEntityId($entityId): self;
     // phpcs:enable SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingNativeTypeHint
 
     /**
